@@ -1,0 +1,110 @@
+/* Sushma Telagamsetti
+    Student ID: C0901939 */
+  /* Linear gradient for body of web page */
+ 
+body {
+        background: linear-gradient(#e66465, #9198e5);
+}
+      /* Styles for header*/
+header {
+        font-size: xx-large;
+        color: blue;
+}
+/* Styles for Quiz container*/
+.quiz-container {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+}
+/* Styles for question class*/
+.question {
+    background-color: paleturquoise;
+    padding: 20px;
+    padding-left: 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* opacity: 0; */
+    transition: opacity 0.5s ease-in-out, transfprm 0.5s ease-in-out;
+}
+/* Styles for Options*/
+.options {
+    padding: 0;
+    margin-top: 10px;
+}
+
+.options li {
+    background-color: #d3d3d3;
+    margin: 5px 0;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+}
+
+.options li:hover {
+    background-color: #a9a9a9;
+}
+
+/* Style for radio buttons */
+.options li input[type="radio"] {
+    display: none;
+}
+
+.options li label {
+    cursor: pointer;
+    padding: 10px;
+    display: block;
+}
+
+/* Animation */
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+/* Style for Animation for highlighting correct ans */
+.options li input[type="radio"]:checked + label.correct {
+    background-color: #42e342;
+    width: 97.3%;
+    color: #ffffff;
+    border-radius: 5px;
+    animation: blink 1s infinite; /* 1s duration, infinite loop */
+}
+
+/* Style for Animation for highlighting incorrect ans */
+.options li input[type="radio"]:checked + label.incorrect {
+    background-color: #ff0000;
+    width: 97.3%;
+    color: #ffffff;
+    border-radius: 5px;
+}
+
+/* Style for animation to fade in if windows is reload*/
+
+/* Style for better accessibility */
+.options li label:focus {
+    outline: 2px solid #4caf50;
+}
+
+/* Style for the button */
+.submit-button {
+    text-align: center;
+    background-color: #4CAF50; /* Green background color */
+    color: white; /* White text color */
+    padding: 10px 20px; /* Padding around the text */
+    font-size: 16px; /* Font size */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Change cursor on hover */
+}
+
+/* Hover effect */
+.submit-button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+/* Style for a responsive design */
+@media screen and (max-width: 600px){
+    .quiz-container {
+        grid-template-columns: 1fr;
+    }   
+}
